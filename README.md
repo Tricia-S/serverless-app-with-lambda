@@ -24,6 +24,53 @@ This project includes:
 - **Data Storage**: Leveraging DynamoDB to store customer data with a NoSQL structure.
 - **Serverless Data Posting**: Using AWS Lambda in combination with API Gateway to process and post data from the HTML form to DynamoDB in real-time.
 
+## Serverless function to post data to the NoSQL database 
+Functioning Lambda Function and Testing Method Used 
+Lambda Function code testing before deploying code
+
+Test events to with default AWS Lambda function code provided.
+Paste the API Gateway invoke URL, https://xv90i8653k.execute-api.us-east-1.amazonaws.com/production/status_GetCustomerInfo and https://xv90i8653k.execute-api.us-east-1.amazonaws.com/production/status_PostCustomerInfo
+![image](https://github.com/user-attachments/assets/1f951786-4896-4a0e-9c70-de51c51c47b6)
+![image](https://github.com/user-attachments/assets/2715bae2-a54a-4563-850b-6eb67800173e)
+![image](https://github.com/user-attachments/assets/8525a3e7-b43e-4b37-aa30-3d3a8db7bdd6)
+
+Lambda Function testing after deploying code:
+After deployment using the same invoke URLs above, confirmation that new functionalities work when accessed via API Gateway.
+![image](https://github.com/user-attachments/assets/13cac94b-8ca7-4a11-aa42-b362c8f378fb)
+![image](https://github.com/user-attachments/assets/31632ab0-335c-4ff1-8414-bb12f575ff2c)
+
+API Gateway testing
+![image](https://github.com/user-attachments/assets/927d7534-49b8-47fc-b741-52807ed6bed2)
+![image](https://github.com/user-attachments/assets/151b97fa-93b5-4b49-a633-46c53a85bfe9)
+![image](https://github.com/user-attachments/assets/aecca179-f0e7-4709-a186-902338013063)
+![image](https://github.com/user-attachments/assets/39218034-0b8c-466f-b887-97d54a7b61a6)
+
+![image](https://github.com/user-attachments/assets/4afbfa99-4537-450e-9686-132b6278045b)
+
+![image](https://github.com/user-attachments/assets/79824da0-5397-4716-924e-762beb6d48c1)
+![image](https://github.com/user-attachments/assets/725a8fbb-a970-4cda-9684-aedc7b43f816)
+![image](https://github.com/user-attachments/assets/387fd6db-209c-40a9-89b6-08f385ede921)
+![image](https://github.com/user-attachments/assets/6fde7f53-dba0-49ed-aac6-e613ebe7c7b8)
+
+Postman 
+Another way to verify Lambda and API Gateway functionality is using Postman. For this, I cleared all profiles from DynamoDB for a clean testing environment.
+![image](https://github.com/user-attachments/assets/01936156-d35d-49b1-9490-82b2f30cf1f2)
+![image](https://github.com/user-attachments/assets/5302824c-c1a8-48f7-a6a4-d8535a61134e)
+![image](https://github.com/user-attachments/assets/8c84289b-997b-47a5-b01c-d2b0a9c28b37)
+![image](https://github.com/user-attachments/assets/8a51c78d-585e-40c5-84fe-ac82b95b3612)
+![image](https://github.com/user-attachments/assets/1fe813e5-8267-4c54-b7e9-6dff9327168b)
+![image](https://github.com/user-attachments/assets/5951dc31-0052-4b8c-a4e6-c2de7be07dd6)
+![image](https://github.com/user-attachments/assets/4590813e-712e-42f0-a34b-56ec06895e2b)
+![image](https://github.com/user-attachments/assets/0316ba71-2bd6-4a8b-a95b-05aae184905d)
+![image](https://github.com/user-attachments/assets/8527d716-1c98-4e76-9cbb-9a7b5482d990)
+![image](https://github.com/user-attachments/assets/c01a2b1c-1ae0-4025-abf8-4aefed45091e)
+
+S3 bucket Form Page Hosting 
+![image](https://github.com/user-attachments/assets/b7468e5e-d970-4a17-b70d-b8f05ff80172)
+![image](https://github.com/user-attachments/assets/56830c30-124f-4d70-9084-76ff6ee78242)
+![image](https://github.com/user-attachments/assets/24de6134-9436-4aec-827c-0eabb9e94133)
+
+
 ## Why I Built This
 I pursued this project as a way to:
 - **Expand My Technical Skills**: I wanted to explore AWS beyond the basics, integrating multiple services (Lambda, DynamoDB, S3, API Gateway) to see how they work together in a serverless ecosystem.
