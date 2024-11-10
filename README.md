@@ -1,5 +1,11 @@
 # Serverless Customer Data Management Project with AWS Lambda
 
+[![AWS Lambda](https://img.shields.io/badge/AWS%20Lambda-FF9900?style=flat&logo=aws)](https://aws.amazon.com/lambda/)
+[![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat&logo=amazon-dynamodb)](https://aws.amazon.com/dynamodb/)
+[![S3 Bucket](https://img.shields.io/badge/Amazon%20S3-569A31?style=flat&logo=amazon-s3)](https://aws.amazon.com/s3/)
+[![API Gateway](https://img.shields.io/badge/API%20Gateway-FF4F00?style=flat&logo=amazon-api-gateway)](https://aws.amazon.com/api-gateway/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+
 **Project Type**: Personal Exploration Project  
 **Role**: Designer & Developer  
 **Duration**: Self-paced, ongoing improvements  
