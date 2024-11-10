@@ -14,10 +14,11 @@
 1. [Project Overview](#project-overview)
 2. [Objective](#objective)
 3. [Project Highlights](#project-highlights)
-4. [Functioning Features Implemented and Testing Methods Used](#functioning-features-implemented-and-testing-methods-used)
-5. [Why I Built This](#why-i-built-this)
-6. [Key Takeaways](#key-takeaways)
-7. [Future Steps](#future-steps)
+4. [Network Diagram](#network-diagram)
+5. [Functioning Features Implemented and Testing Methods Used](#functioning-features-implemented-and-testing-methods-used)
+6. [Why I Built This](#why-i-built-this)
+7. [Key Takeaways](#key-takeaways)
+8. [Future Steps](#future-steps)
 
 ## Project Overview
 As a Data Science student with a strong interest in cloud computing, I was eager to explore how serverless technologies can power scalable, real-time applications. Alongside my full-time studies, I took the opportunity to deepen my knowledge of AWS services—especially AWS Lambda—by working on a collaborative project with a team. This repository highlights my sole individual contribution to our team’s hands-on experience with serverless architecture, enabling us to build a fully functional application that efficiently captures and processes customer data at scale.
@@ -47,6 +48,10 @@ This project includes:
 - **Data Capture**: A custom-built HTML form that captures customer details.
 - **Data Storage**: Leveraging DynamoDB to store customer data with a NoSQL structure.
 - **Serverless Data Posting**: Using AWS Lambda in combination with API Gateway to process and post data from the HTML form to DynamoDB in real-time.
+
+## Network Diagram
+![image](https://github.com/user-attachments/assets/2dc071f9-bdf9-4519-ad2a-cec066d47158)
+![image](https://github.com/user-attachments/assets/fd354206-f793-43ab-9a26-68c975ef52a8)
 
 ## Functioning Features Implemented and Testing Methods Used 
 Lambda Function code testing before deploying code
