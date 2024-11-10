@@ -13,10 +13,27 @@
 6. [Future Steps](#future-steps)
 
 ## Project Overview
-As a Data Science student with a strong interest in cloud computing, I was eager to explore how serverless technologies can power scalable, real-time applications. Alongside my full-time studies, I took the opportunity to deepen my knowledge of AWS services—especially AWS Lambda—by working on a collaborative project with a team. This project highlights my individual contributions to our team’s hands-on experience with serverless architecture, enabling us to build a fully functional application that efficiently captures and processes customer data at scale.
+As a Data Science student with a strong interest in cloud computing, I was eager to explore how serverless technologies can power scalable, real-time applications. Alongside my full-time studies, I took the opportunity to deepen my knowledge of AWS services—especially AWS Lambda—by working on a collaborative project with a team. This repository highlights my sole individual contribution to our team’s hands-on experience with serverless architecture, enabling us to build a fully functional application that efficiently captures and processes customer data at scale.
+
+This project is also aligned with a **real-world case study** where our team worked as cloud consultants for **Felicity Pte Ltd**, implementing AWS-based serverless solutions for **Platinum Pte Ltd**. The project focused on building a NoSQL database for customer data storage and designing an HTML page for real-time data capture, similar to the system we were developing in this exploration.
+
+### Case Study: Platinum Pte Ltd Project
+Assume that your team (consisting of 4 to 5 members) has been appointed by a large IT service provider organization called Felicity Pte Ltd as IT cloud consultants.
+
+A client company, Platinum Pte Ltd, has tasked Felicity Pte Ltd with implementing some requirements. Platinum Pte Ltd also wants your team to implement additional mandatory requirements, which are:
+
+**To design and implement a new AWS serverless application architecture with the following cloud requirements:**
+
+1. **Create a NoSQL database** to store customer data that is posted to the website. The database should have data fields to capture the customer's first name, last name, and email address.
+
+2. **Create an HTML forms page** to capture the customer data and post it to the NoSQL database using HTTP (API Gateway). The webpage should also be able to show the current records in the NoSQL database.
 
 ## Objective
 The primary aim was to experiment with AWS Lambda and gain practical skills in serverless architecture while creating something tangible. I challenged myself to build a system that captures, stores, and manages customer data in real-time, with additional functionalities like notifications and image processing—showcasing the power of serverless infrastructure for data management.
+
+For Platinum Pte Ltd, the system aimed to meet requirements such as:
+- Creating a scalable NoSQL database for customer data.
+- Integrating an HTML form to collect and store customer information through AWS Lambda and API Gateway.
 
 ## Project Highlights
 This project includes:
@@ -24,8 +41,7 @@ This project includes:
 - **Data Storage**: Leveraging DynamoDB to store customer data with a NoSQL structure.
 - **Serverless Data Posting**: Using AWS Lambda in combination with API Gateway to process and post data from the HTML form to DynamoDB in real-time.
 
-## Serverless function to post data to the NoSQL database 
-Functioning Lambda Function and Testing Method Used 
+## Functioning Features Implemented and Testing Method Used 
 Lambda Function code testing before deploying code
 
 Test events to with default AWS Lambda function code provided.
@@ -70,12 +86,11 @@ S3 bucket Form Page Hosting
 ![image](https://github.com/user-attachments/assets/56830c30-124f-4d70-9084-76ff6ee78242)
 ![image](https://github.com/user-attachments/assets/24de6134-9436-4aec-827c-0eabb9e94133)
 
-
 ## Why I Built This
 I pursued this project as a way to:
 - **Expand My Technical Skills**: I wanted to explore AWS beyond my current focus in data science, integrating multiple services (Lambda, DynamoDB, S3, API Gateway) to see how they work together in a serverless ecosystem.
 - **Learn Through Experimentation**: Rather than following a strict project outline, I allowed myself the freedom to experiment and make incremental improvements, learning from each step along the way.
-- **Apply Concepts in Real-World Scenarios**: This project gave me the opportunity to experience the challenges of cloud infrastructure and serverless computing first-hand, broadening my perspective on scalable solutions.
+- **Apply Concepts in Real-World Scenarios**: This project gave me the opportunity to experience the challenges of cloud infrastructure and serverless computing first-hand, broadening my perspective on scalable solutions. The requirements from **Platinum Pte Ltd** provided valuable insights into designing for real-world use cases.
 
 ## Key Takeaways
 This project taught me:
@@ -87,4 +102,3 @@ This project taught me:
 I plan to continue refining this project by:
 - Adding **CloudWatch monitoring** for more detailed performance insights.
 - Exploring **Automated Notifications** to configure SNS notifications to alert upon data entry or file uploads.
-
