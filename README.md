@@ -73,7 +73,7 @@ S3 bucket Form Page Hosting
 
 ## Why I Built This
 I pursued this project as a way to:
-- **Expand My Technical Skills**: I wanted to explore AWS beyond the basics, integrating multiple services (Lambda, DynamoDB, S3, API Gateway) to see how they work together in a serverless ecosystem.
+- **Expand My Technical Skills**: I wanted to explore AWS beyond my current focus in data science, integrating multiple services (Lambda, DynamoDB, S3, API Gateway) to see how they work together in a serverless ecosystem.
 - **Learn Through Experimentation**: Rather than following a strict project outline, I allowed myself the freedom to experiment and make incremental improvements, learning from each step along the way.
 - **Apply Concepts in Real-World Scenarios**: This project gave me the opportunity to experience the challenges of cloud infrastructure and serverless computing first-hand, broadening my perspective on scalable solutions.
 
