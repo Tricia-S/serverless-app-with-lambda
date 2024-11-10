@@ -8,9 +8,10 @@
 1. [Project Overview](#project-overview)
 2. [Objective](#objective)
 3. [Project Highlights](#project-highlights)
-4. [Why I Built This](#why-i-built-this)
-5. [Key Takeaways](#key-takeaways)
-6. [Future Steps](#future-steps)
+4. [Functioning Features Implemented and Testing Methods Used](#functioning-features-implemented-and-testing-methods-used)
+5. [Why I Built This](#why-i-built-this)
+6. [Key Takeaways](#key-takeaways)
+7. [Future Steps](#future-steps)
 
 ## Project Overview
 As a Data Science student with a strong interest in cloud computing, I was eager to explore how serverless technologies can power scalable, real-time applications. Alongside my full-time studies, I took the opportunity to deepen my knowledge of AWS services—especially AWS Lambda—by working on a collaborative project with a team. This repository highlights my sole individual contribution to our team’s hands-on experience with serverless architecture, enabling us to build a fully functional application that efficiently captures and processes customer data at scale.
@@ -41,7 +42,7 @@ This project includes:
 - **Data Storage**: Leveraging DynamoDB to store customer data with a NoSQL structure.
 - **Serverless Data Posting**: Using AWS Lambda in combination with API Gateway to process and post data from the HTML form to DynamoDB in real-time.
 
-## Functioning Features Implemented and Testing Method Used 
+## Functioning Features Implemented and Testing Methods Used 
 Lambda Function code testing before deploying code
 
 Test events to with default AWS Lambda function code provided.
