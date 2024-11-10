@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platinum Pte Ltd MNC - Customer Data Form</title>
+    <style>
+
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background-color: #f7f1e3;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+               .container {
+            max-width: 600px;
+            width: 100%;
+            background: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align the contents */
+        }
+        .logo {
+            width: 150px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-bottom: 10px; /* Add space below the logo */
+        }
+        h1 {
+            color: #000000;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        button {
+            background: #000000;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #808080;
+        }
+        .records-container {
+            margin-top: 30px;
+            text-align: left;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #000000;
+            color: white;
+        }
+        td {
+            background-color: #f7f1e3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.jpg" alt="Company Logo" class="logo">	
+        <h1>Save Customer Profile</h1>
+        <form id="customerForm">
+            <label for="FirstName">First Name:</label>
+            <input type="text" id="FirstName" name="FirstName" required>
+
+            <label for="LastName">Last Name:</label>
+            <input type="text" id="LastName" name="LastName" required>
+
+            <label for="EmailAddress">Email Address:</label>
+            <input type="email" id="EmailAddress" name="EmailAddress" required>
+
+            <button type="button" id="saveprofile">Save Profile</button>
+        </form>
+        <div id="profileSaved"></div>
+        
+        <div class="records-container">
+            <h1>View all Customer Profiles</h1>
+            <button id="getprofile">View all Customer Profiles</button>
+            <table id="PlatinumPteLtd_CustomerInfo">
+                <tr>
+                    <th>Email Address</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        var API_ENDPOINT_CUSTOMER = "https://7y6vwygpo1.execute-api.us-east-1.amazonaws.com/production/customer";
+        var API_ENDPOINT_CUSTOMERS = "https://7y6vwygpo1.execute-api.us-east-1.amazonaws.com/production/customers";
+
+        document.getElementById("saveprofile").onclick = function() {
+            var inputData = {
+                "EmailAddress": $('#EmailAddress').val(),
+                "FirstName": $('#FirstName').val(),
+                "LastName": $('#LastName').val()
+            };
+            $.ajax({
+                url: API_ENDPOINT_CUSTOMER,
+                type: 'POST',
+                data: JSON.stringify(inputData),
+                contentType: 'application/json; charset=utf-8',
+                success: function(response) {
+                    document.getElementById("profileSaved").innerHTML = "Profile Saved!";
+                    // Clear the form
+                    $('#EmailAddress').val('');
+                    $('#FirstName').val('');
+                    $('#LastName').val('');
+                    fetchData();
+                },
+                error: function(response) {
+                    alert("Error: " + response.responseText);
+                }
+            });
+        };
+
+        document.getElementById("getprofile").onclick = function() {
+            fetchData();
+        };
+
+        function fetchData() {
+            $.ajax({
+                url: API_ENDPOINT_CUSTOMERS,
+                type: 'GET',
+                contentType: 'application/json; charset=utf-8',
+                success: function(response) {
+                    $('#PlatinumPteLtd_CustomerInfo tr').slice(1).remove();
+                    jQuery.each(response.customers, function(i, data) {
+                        $("#PlatinumPteLtd_CustomerInfo").append("<tr> \
+                            <td>" + data['EmailAddress'] + "</td> \
+                            <td>" + data['FirstName'] + "</td> \
+                            <td>" + data['LastName'] + "</td> \
+                            </tr>");
+                    });
+                },
+                error: function(response) {
+                    alert("Error: " + response.responseText);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
